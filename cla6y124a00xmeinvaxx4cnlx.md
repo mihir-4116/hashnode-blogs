@@ -354,9 +354,25 @@ right join table2_name
 on table2_name.col-name =table2_name.col-name;
 ``` 
 
+### **Union and Union All**
+```SQL
+Union 
+
+select * from table_1
+UNION
+select * from table_2;
+
+Union All
+
+select * from table_1
+UNION ALL
+select * from table_2;
+``` 
+
 ### **Views**
 ```javascript
 => virtual tables = used to hide some crucial data from database users
+=> do not occupy any space
 ``` 
 ```SQL
 CREATE VIEW view_name as 
@@ -364,6 +380,29 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ``` 
+
+### **Common Table Expressions**
+```SQL
+Syntex
+
+with output as query;
+
+Example
+
+with dept_wise_salary as (select dept_id , sum(salary) as total_salary from amazon_employees group by dept_id)
+
+------ Write a Query to generate numbers from 1 to 10 in SQL ------
+
+with recursive generate_numbers as   
+(
+  select 1 as n
+  union 
+  select n+1 from generate_numbers where n<10
+) 
+
+select * from generate_numbers;
+``` 
+
 
 ### **Triggers**
 ```javascript
