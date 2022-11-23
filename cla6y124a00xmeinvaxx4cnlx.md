@@ -26,10 +26,10 @@
 - **Create**
 ```SQL
 create table table_name( 
-   column_name datatype auto_increment not-null,
-   column_name datatype not-null default "default val",
+   column_name datatype auto_increment not null,
+   column_name datatype not null default "default val",
    column_name datatype null,
-   primary key(column-name)
+   primary key(column_name)
 );
 ``` 
 
@@ -40,14 +40,14 @@ select * from table_name
 - **Insert**
 ```SQL
 insert into table_name(column1,coumn2)
-values (col1-val,col2-val),
-       (col1-val,col2-val),
-       (col1-val,col2-val);
+values (col1_val,col2_val),
+       (col1_val,col2_val),
+       (col1_val,col2_val);
 ``` 
 
 - **Update**
 ```SQL
-update table_name set col-name = updated-val where condition;
+update table_name set col_name = updated_val where condition;
 ``` 
 
 - **Delete**
@@ -118,8 +118,8 @@ select cat_id as id from cats where cat_id=age;
 
 - **Limit**
 ```SQL
-select col-name from table_name order by col_name desc limit number;
-select col-name from table_name order by col_name desc limit skip-result, number;;
+select col_name from table_name order by col_name desc limit number;
+select col_name from table_name order by col_name desc limit skip-result, number;
 ``` 
 
 ### **SQL String Functions**
@@ -131,9 +131,9 @@ select concat(col1,' ',col2) from table_name where condition;
 
 - **Substring**
 ```SQL
-select substring(col,start-idx,end-idx) from table_name where condition;
+select substring(col,start_idx,end_idx) from table_name where condition;
 select substring(col,idx) from table_name where condition; -> this will return characters after idx in string
-select substr(col,start-idx,end-idx) from table_name where condition; -> this will also work same as substring
+select substr(col,start_idx,end_idx) from table_name where condition; -> this will also work same as substring
 ``` 
 
 - **Replace**
@@ -165,18 +165,18 @@ select lower(col) as lowerCase from table_name where condition;
 ``` 
 
  ```SQL
-SELECT * from table_name where col-name like '%he%'; -> return if it founds he anywhere in col-val
-SELECT * from table_name where col-name like 'he%'; -> return if col_val start with he
-SELECT * from table_name where col-name like '%he'; -> return if col_val end with he
-SELECT * from table_name where col-name like '__'; -> return if col-val has only 2 characters
-SELECT * from table_name where col-name like '%\_%' -> return val like 10% or fetch_data etc...
+SELECT * from table_name where col_name like '%he%'; -> return if it founds he anywhere in col_val
+SELECT * from table_name where col_name like 'he%'; -> return if col_val start with he
+SELECT * from table_name where col_name like '%he'; -> return if col_val end with he
+SELECT * from table_name where col_name like '__'; -> return if col_val has only 2 characters
+SELECT * from table_name where col_name like '%\_%' -> return val like 10% or fetch_data etc...
  ``` 
 
 ### **SQL Aggregate Functions**
 
 - **Count**
 ```SQL
-select count(col-name) from table_name;
+select count(col_name) from table_name;
 ``` 
 
 - **Group By**
@@ -186,18 +186,18 @@ select col_name, count(*) from table_name where condition group by col_name -> r
 
 - **Min And Max**
 ```SQL
-select min(col-name) from table_name;
-select max(col-name) from table_name;
+select min(col_name) from table_name;
+select max(col_name) from table_name;
 ``` 
 
 - **Sum**
 ```SQL
-select sum(col-name) from table_name group by col-name;
+select sum(col_name) from table_name group by col_name;
 ``` 
 
 - **Average - AVG**
 ```SQL
-select avg(col-name) from table_name group by col-name;
+select avg(col_name) from table_name group by col_name;
 ``` 
 
 ### **SQL Data Types**
@@ -259,45 +259,45 @@ TIMESTAMPS() -> Less space compare to DATETIME()
 
 - **Not Equal (≠)**
 ```SQL
-select * from table_name where col-val != val;
+select * from table_name where col_val != val;
 ``` 
 
 - **Not Like**
 ```SQL
-select * from table_name where col-val not like val;
+select * from table_name where col_val not like val;
 ``` 
 
 - **Greater Than And Less Than**
 ```SQL
-select * from table_name where col-val > val;
-select * from table_name where col-val >= val;
-select * from table_name where col-val < val;
-select * from table_name where col-val <= val;
+select * from table_name where col_val > val;
+select * from table_name where col_val >= val;
+select * from table_name where col_val < val;
+select * from table_name where col_val <= val;
 ``` 
 
 - **And**
 ```SQL
-select * from table_name where col-val=val and col-val=val
+select * from table_name where col_val=val and col_val=val
 ``` 
 
 - **Or**
 ```SQL
-select * from table_name where col-val=val or col-val=val
+select * from table_name where col_val=val or col_val=val
 ``` 
 
 - **Between**
 ```SQL
-select * from table_name where col-val between val1 and val2;
+select * from table_name where col_val between val1 and val2;
 ``` 
 
 - **In**
 ```SQL
-select * from table_name where col-val in (val1,val2,val3);
+select * from table_name where col_val in (val1,val2,val3);
 ``` 
 
 - **Not In**
 ```SQL
-select * from table_name where col-val not in (val1,val2,val3);
+select * from table_name where col_val not in (val1,val2,val3);
 ``` 
 
 - **Case Statements**
@@ -335,7 +335,7 @@ SELECT * FROM table1_name,table2_name;
 => Returns common records from both tables
 SELECT * FROM table1_name 
 inner join table2_name 
-on table2_name.col-name =table2_name.col-name;
+on table2_name.col_name = table2_name.col_name;
 ``` 
 
 - **Left Join**
@@ -343,7 +343,7 @@ on table2_name.col-name =table2_name.col-name;
 => Returns all the records from left table and matching one from right table
 SELECT * FROM table1_name 
 left join table2_name 
-on table2_name.col-name =table2_name.col-name;
+on table2_name.col_name = table2_name.col_name;
 ``` 
 
 - **Right Join**
@@ -351,8 +351,71 @@ on table2_name.col-name =table2_name.col-name;
 => Returns all the records from right table and matching one from left table
 SELECT * FROM table1_name 
 right join table2_name 
-on table2_name.col-name =table2_name.col-name;
+on table2_name.col_name = table2_name.col_name;
 ``` 
+
+### **Window Functions**
+- **partition by**
+```SQL
+select *,
+       aggregate_function(col_name) over(partition by col_name order by col_name desc) 
+from table_name;
+``` 
+- **Rank, Row_Number, Dense_Rank window functions**
+```SQL
+select *,
+       row_number() aggregate_function(col_name) over(partition by col_name order by col_name desc) as row_num,
+       rank() aggregate_function(col_name) over(partition by col_name order by col_name desc) as rank_val,
+       dense_rank() aggregate_function(col_name) over(partition by col_name order by col_name desc) as dense_rank_val
+from table_name;
+```
+
+- **Lead **
+```SQL
+select *,
+      lag(col_name, 1) over(order by col_name) as pre_val
+from table_name;
+```
+
+- **Lag**
+```SQL
+select *,
+      lead(col_name, 1) over(order by col_name) as next_val
+from table_name;
+```
+
+- **Frame Clause In Window Functions**
+
+```SQL
+select *,
+      aggregate_function(col_name) over(order by col_name rows between n preceding and m following) as prev_current_and_next
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name rows between n preceding and current row) as previous_and_current
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name rows between current row and m following) as current_and_next
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name rows between unbounded preceding and current row) as current_to_firstRow_upwards
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name rows between current row and unbounded following) as current_to_lastRow_downwards
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name rows between unbounded preceding and unbounded following) as current_to_upwards_and_downwards
+from table_name;
+
+select *,
+      aggregate_function(col_name) over(order by col_name range between n preceding and m following) as diff_between_current_and_upwards_not_less_then_m_and_downwards_not_greater_then_m
+from table_name;
+```
+
 
 ### **Union and Union All**
 ```SQL
