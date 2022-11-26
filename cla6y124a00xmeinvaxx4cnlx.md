@@ -1,6 +1,6 @@
 # SQL Commands Cheat Sheet
 
-### **What is Database ?*
+### **What is Database ?**
 ```SQL
 - it’s a collection of data
 - can access and manipulate data
