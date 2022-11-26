@@ -1,7 +1,7 @@
 # SQL Commands Cheat Sheet
 
-### **What is Database ?**
-```javascript
+### **What is Database ?*
+```SQL
 - it’s a collection of data
 - can access and manipulate data
 - computerised data with an accessible interface
