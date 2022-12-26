@@ -1,5 +1,7 @@
 # Prototype Design Pattern
 
+### Introduction
+
 * The prototype pattern is a useful way to share properties among many objects of the same type
     
 * It clones the object and provides the existing properties to the cloned object using prototypal inheritance
@@ -8,6 +10,9 @@
     
 * The prototypal pattern has native support in JavaScript. It involves cloning an already configured object. hence, the cloned objects are created by reference instead of having their separate copies. This boosts the performance and efficiency of the code
     
+
+### Use Cases
+
 * It can be used to eliminate the overhead of initializing an object
     
 * It can be used when you want the system to be independent of how the products in it are created
@@ -15,8 +20,10 @@
 * It can be used when creating objects from a database, whose values are copied to the cloned object
     
 
+Example
+
 ```javascript
-// Example
+
 const Cricketer = function(name) {
   this.name = name
   this.runs = 100
