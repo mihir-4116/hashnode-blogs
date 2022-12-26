@@ -2,11 +2,11 @@
 
 ### Introduction
 
-* The singleton pattern is a type of creational pattern that restricts the instantiation of a class to a single object. This allows the class to create an instance of the class the first time it is instantiated; however, on the next try, the existing instance of the class is returned. No new instance is created.
+* The singleton pattern is a type of creational pattern that restricts the instantiation of a class to a single object. This allows the class to create an instance of the class the first time it is instantiated. however, on the next try, the existing instance of the class is returned. No new instance is created.
     
 * The singleton pattern is mostly used in cases where you want a single object to coordinate actions across a system.
     
-* Singleton pattern can be considered the basics of global state management libraries such as Redux or React Context.
+* singleton pattern can be considered the basics of global state management libraries such as Redux or React Context.
     
 * They can be accessed globally and acts as a single access point for accessing the global state
     
