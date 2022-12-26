@@ -1,5 +1,7 @@
 # Singleton Design Pattern
 
+### Introduction
+
 * The singleton pattern is a type of creational pattern that restricts the instantiation of a class to a single object. This allows the class to create an instance of the class the first time it is instantiated; however, on the next try, the existing instance of the class is returned. No new instance is created.
     
 * The singleton pattern is mostly used in cases where you want a single object to coordinate actions across a system.
@@ -9,7 +11,7 @@
 * They can be accessed globally and acts as a single access point for accessing the global state
     
 
-**Singletons are mostly used by**
+### **Use Cases**
 
 * Services: services can be singleton since they store the state, and configuration and provide access to resources; hence, it makes sense to have a single instance of a service in an application.
     
@@ -17,6 +19,8 @@
     
 * Configurations: if there is an object with a specific configuration, you don’t need a new instance every time that configuration object is needed.
     
+
+### Example
 
 ```typescript
 class Logger {
